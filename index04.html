@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>declarative fields+object links</title>
+</head>
+<body>
+    <script>
+        
+        var persone = {
+            name: prompt("Enter a name"),
+            surname: prompt("Enter a surname"),
+            married: confirm("Are you married?")
+        };
+
+        persone.smartphone = prompt ("Enter your smartphone");
+        persone.laptop = prompt ("Enter your laptop");
+
+        
+        var notebook = {
+            brand: "HP",
+            type:  "440 G4",
+            model: "Y7Z75EA",
+            ram: 4,
+            size: "14",
+            weight: 1.8,
+                resolution: {
+                    width: 1920,
+                    height: 1080,
+                },
+        };
+
+        var phone = {
+            brand: "meizu",
+            model: "m2",
+            ram: 2,
+            color: "black",
+        };
+
+        notebook.owner = persone;
+        phone.owner = persone;
+        persone.laptop.owner=persone;
+
+        console.log(persone);
+        console.log(persone.laptop.owner)
+        console.log(persone.smartphone.owner)
+
+        if (persone.smartphone.owner.laptop.owner.smartphone == persone.smartphone) {
+            alert ("Все ок")
+        }
+        else {
+            alert("Что-то не так")
+        }
+        
+        </script>
+</body>
+</html>

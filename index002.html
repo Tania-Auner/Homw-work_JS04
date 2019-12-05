@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scissors</title>
+</head>
+<body>
+
+    <script>
+        
+        
+    function randomInteger(min, max) {// случайное число от min до (max+1)
+            let rand = min + Math.random() * (max + 1 - min);
+            return Math.floor(rand);
+    }
+    var gameName = prompt ("Введите камень или ножницы или бумага");
+    var myArray = ["камень", "ножницы","бумага"];
+    var myRandom = randomInteger(0,2);
+            if (myArray[myRandom] == gameName) {
+                alert ("Вы угадали!")
+            }
+            else {
+                alert ("Не угадали!")
+            }
+
+            
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>currency calc: improved</title>
+</head>
+<body>
+    <script> 
+    
+    const usd = 24.3;
+    const eur = 27;
+
+    var Sum = prompt("Введите сумму в гривнах для обмена");
+    var ammount = prompt ('Выберите валюту usd или eur');
+    console.log(ammount.toLowerCase());
+    switch (ammount.toLowerCase()){
+    case "usd": alert((Sum/usd).toFixed(4));
+    break;
+    case "eur": alert ((Sum/eur).toFixed(4));
+    }
+
+
+    </script>
+</body>
+</html>
